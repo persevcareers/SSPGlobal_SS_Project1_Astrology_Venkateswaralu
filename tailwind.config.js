@@ -1,0 +1,114 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        gold: {
+          50: '#FFF9E6',
+          100: '#FFF0BF',
+          200: '#FFE699',
+          300: '#FFDB73',
+          400: '#FFD04D',
+          500: '#FFC526',
+          600: '#E6AA00',
+          700: '#BF8E00',
+          800: '#997200',
+          900: '#735600',
+        },
+        saffron: {
+          50: '#FFF3E0',
+          100: '#FFDFB0',
+          200: '#FFCB7D',
+          300: '#FFB74A',
+          400: '#FFA726',
+          500: '#FF9800',
+          600: '#E68900',
+          700: '#CC7A00',
+          800: '#B36B00',
+          900: '#995C00',
+        },
+        spiritual: {
+          dark: '#0A0A1A',
+          deeper: '#0D0D2B',
+          deep: '#12123A',
+          medium: '#1A1A4E',
+          light: '#2A2A6E',
+          accent: '#3D3D8E',
+        },
+        sacred: {
+          red: '#C62828',
+          green: '#2E7D32',
+          blue: '#1565C0',
+          yellow: '#F9A825',
+          white: '#FAFAFA',
+          vermillion: '#E53935',
+        }
+      },
+      fontFamily: {
+        heading: ['Cinzel', 'serif'],
+        body: ['Inter', 'sans-serif'],
+        decorative: ['Playfair Display', 'serif'],
+      },
+      animation: {
+        'float': 'float 6s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
+        'spin-slow': 'spin 20s linear infinite',
+        'pulse-slow': 'pulse 4s ease-in-out infinite',
+        'shimmer': 'shimmer 3s ease-in-out infinite',
+        'fade-in': 'fadeIn 1s ease-out forwards',
+        'slide-up': 'slideUp 0.8s ease-out forwards',
+        'slide-left': 'slideLeft 0.8s ease-out forwards',
+        'slide-right': 'slideRight 0.8s ease-out forwards',
+        'twinkle': 'twinkle 3s ease-in-out infinite',
+        'orbit': 'orbit 15s linear infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        glow: {
+          '0%': { boxShadow: '0 0 5px rgba(255, 197, 38, 0.3), 0 0 10px rgba(255, 197, 38, 0.2)' },
+          '100%': { boxShadow: '0 0 20px rgba(255, 197, 38, 0.6), 0 0 40px rgba(255, 197, 38, 0.4)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% center' },
+          '100%': { backgroundPosition: '200% center' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(40px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideLeft: {
+          '0%': { opacity: '0', transform: 'translateX(40px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        slideRight: {
+          '0%': { opacity: '0', transform: 'translateX(-40px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        twinkle: {
+          '0%, 100%': { opacity: '0.3', transform: 'scale(0.8)' },
+          '50%': { opacity: '1', transform: 'scale(1.2)' },
+        },
+        orbit: {
+          '0%': { transform: 'rotate(0deg) translateX(150px) rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg) translateX(150px) rotate(-360deg)' },
+        },
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+    },
+  },
+  plugins: [],
+}

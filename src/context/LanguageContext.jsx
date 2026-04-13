@@ -1,0 +1,406 @@
+import { createContext, useContext, useState } from 'react';
+
+const LanguageContext = createContext();
+
+const translations = {
+  en: {
+    // Navbar
+    nav: {
+      home: 'Home',
+      about: 'About',
+      qualifications: 'Qualifications',
+      services: 'Services',
+      testimonials: 'Testimonials',
+      contact: 'Contact',
+      bookNow: 'Book Now',
+    },
+    // Hero
+    hero: {
+      title: 'Trusted Hereditary Astrologer',
+      titleHighlight: '15+ Years Experience',
+      subtitle: 'Guiding lives through ancient Jyotisha wisdom passed through generations',
+      cta1: 'Book Consultation',
+      cta2: 'Contact on WhatsApp',
+      badge1: '15+ Years',
+      badge2: 'Hereditary',
+      badge3: '10000+ Consultations',
+    },
+    // About
+    about: {
+      sectionTag: 'Our Legacy',
+      title: 'About Astrologer Venkateswarlu',
+      description: 'Astrology has been practiced in our family for generations, passed down from our revered ancestors and forefathers. This sacred knowledge of Jyotisha Shastra has been preserved and refined through each generation, combining the timeless wisdom of Vedic astrology with modern analytical approaches.',
+      description2: 'With over 15 years of dedicated practice, Astrologer Venkateswarlu has guided thousands of families and individuals through life\'s most important decisions — from marriage compatability and career choices to resolving planetary doshas and vastu consultations.',
+      stat1Title: '15+',
+      stat1Label: 'Years Experience',
+      stat2Title: '10000+',
+      stat2Label: 'Consultations',
+      stat3Title: '5000+',
+      stat3Label: 'Families Guided',
+      highlight1: '15+ Years of Experience',
+      highlight2: 'Trusted by Thousands of Families',
+      highlight3: 'Traditional + Scientific Approach',
+      highlight4: 'Hereditary Astrological Lineage',
+    },
+    // Qualifications
+    qualifications: {
+      sectionTag: 'Credentials',
+      title: 'Qualifications & Certifications',
+      subtitle: 'Recognized by premier institutions for excellence in Jyotisha Shastra',
+      items: [
+        {
+          title: 'Jothisha Mani',
+          issuer: 'Thiru Guruvarul Jothisha Welfare Association',
+          icon: '🏆',
+        },
+        {
+          title: 'Jyotish Visharada',
+          issuer: 'NS Live Astro Company',
+          icon: '🌟',
+        },
+        {
+          title: 'Certificate of Appreciation',
+          issuer: 'KP Stellar Research Institute',
+          icon: '📜',
+        },
+        {
+          title: 'Certificate of Appreciation',
+          issuer: 'ISKCON',
+          icon: '🙏',
+        },
+        {
+          title: 'Diploma in Jyotisha & Vastu',
+          issuer: 'Rashtriya Sanskrit Vidyapeetha',
+          icon: '📚',
+        },
+        {
+          title: 'M.A. (Phalitha Jyotisha)',
+          issuer: 'Post Graduate Degree',
+          icon: '🎓',
+        },
+        {
+          title: 'Jyotisha Acharya',
+          issuer: 'National Sanskrit University',
+          icon: '⭐',
+        },
+      ],
+    },
+    // Services
+    services: {
+      sectionTag: 'Our Services',
+      title: 'Astrology Services',
+      subtitle: 'Comprehensive Vedic astrology services to guide every aspect of your life',
+      items: [
+        {
+          title: 'Horoscope Reading',
+          description: 'Detailed analysis of your birth chart revealing planetary influences, strengths, and life path guidance based on Vedic principles.',
+          icon: '🔮',
+        },
+        {
+          title: 'Marriage Matching',
+          description: 'Traditional Kundali matching with Guna Milan analysis ensuring compatibility and harmonious union for prospective couples.',
+          icon: '💍',
+        },
+        {
+          title: 'Career Guidance',
+          description: 'Astrological insights into ideal career paths, favorable periods for business ventures, and professional growth timing.',
+          icon: '💼',
+        },
+        {
+          title: 'Vastu Consultation',
+          description: 'Expert Vastu Shastra guidance for homes, offices, and commercial spaces to ensure positive energy flow and prosperity.',
+          icon: '🏠',
+        },
+        {
+          title: 'Dosha Analysis',
+          description: 'Identification and remedies for Mangal Dosha, Kaal Sarp Dosha, Sade Sati, and other planetary afflictions.',
+          icon: '⚡',
+        },
+        {
+          title: 'Personal Consultation',
+          description: 'One-on-one consultation for specific life concerns including health, relationships, finances, and spiritual growth.',
+          icon: '🙏',
+        },
+      ],
+    },
+    // Testimonials
+    testimonials: {
+      sectionTag: 'Testimonials',
+      title: 'What Our Clients Say',
+      subtitle: 'Trusted by thousands of families across India',
+      items: [
+        {
+          name: 'Ramesh Kumar',
+          location: 'Hyderabad',
+          text: 'Venkateswarlu garu\'s predictions about my career change were absolutely accurate. He guided me through a difficult transition and now I am thriving in my new role. His hereditary knowledge is truly remarkable.',
+          rating: 5,
+        },
+        {
+          name: 'Lakshmi Devi',
+          location: 'Vijayawada',
+          text: 'We consulted Venkateswarlu garu for our daughter\'s marriage matching. His thorough analysis and accurate predictions gave us complete confidence. The marriage is blessed and harmonious.',
+          rating: 5,
+        },
+        {
+          name: 'Suresh Reddy',
+          location: 'Tirupati',
+          text: 'The Vastu consultation for our new home was incredibly detailed. After implementing his suggestions, we noticed positive changes in our family\'s well-being and prosperity.',
+          rating: 5,
+        },
+        {
+          name: 'Priya Sharma',
+          location: 'Bangalore',
+          text: 'I was going through Sade Sati and was very worried. Venkateswarlu garu not only explained the effects clearly but provided effective remedies. His approach blends tradition with practical wisdom.',
+          rating: 4,
+        },
+        {
+          name: 'Anand Rao',
+          location: 'Chennai',
+          text: 'Having consulted many astrologers, I can say that Venkateswarlu garu stands apart. His hereditary knowledge and scientific approach make his readings exceptionally accurate and helpful.',
+          rating: 5,
+        },
+      ],
+    },
+    // Contact
+    contact: {
+      sectionTag: 'Get in Touch',
+      title: 'Contact Us',
+      subtitle: 'Book your consultation today and discover the cosmic blueprint of your life',
+      nameLabel: 'Your Name',
+      namePlaceholder: 'Enter your full name',
+      phoneLabel: 'Phone Number',
+      phonePlaceholder: 'Enter your phone number',
+      messageLabel: 'Your Message',
+      messagePlaceholder: 'Tell us about your query...',
+      submitBtn: 'Send Message',
+      callText: 'Call Now',
+      whatsappText: 'WhatsApp',
+      emailText: 'Email',
+      locationText: 'Location',
+      phone: '+91 77990 99069',
+      email: 'astrologervenkateswarlu1@gmail.com',
+      address: 'Hyderabad, Telangana, India',
+    },
+    // Footer
+    footer: {
+      quote: '"The stars in the sky shine to guide us, the wisdom of Jyotisha illuminates the path."',
+      copyright: '© 2026 Astrologer Venkateswarlu. All rights reserved.',
+      quickLinks: 'Quick Links',
+      services: 'Services',
+      followUs: 'Follow Us',
+      designedBy: 'Crafted with ✨ spiritual essence',
+    },
+  },
+  te: {
+    // Navbar
+    nav: {
+      home: 'హోమ్',
+      about: 'గురించి',
+      qualifications: 'అర్హతలు',
+      services: 'సేవలు',
+      testimonials: 'అభిప్రాయాలు',
+      contact: 'సంప్రదించండి',
+      bookNow: 'బుక్ చేయండి',
+    },
+    // Hero
+    hero: {
+      title: 'విశ్వసనీయ వంశపారంపర్య జ్యోతిషుడు',
+      titleHighlight: '15+ సంవత్సరాల అనుభవం',
+      subtitle: 'తరతరాలుగా అందించబడిన ప్రాచీన జ్యోతిష శాస్త్ర జ్ఞానంతో జీవితాలను మార్గదర్శనం చేస్తున్నాము',
+      cta1: 'సంప్రదింపు బుక్ చేయండి',
+      cta2: 'వాట్సాప్‌లో సంప్రదించండి',
+      badge1: '15+ సంవత్సరాలు',
+      badge2: 'వంశపారంపర్యం',
+      badge3: '10000+ సంప్రదింపులు',
+    },
+    // About
+    about: {
+      sectionTag: 'మా వారసత్వం',
+      title: 'జ్యోతిషుడు వెంకటేష్ గురించి',
+      description: 'జ్యోతిష శాస్త్రం మా కుటుంబంలో తరతరాలుగా ఆచరించబడుతోంది, మా పూజ్యులైన పూర్వీకులు మరియు తాతలు నుండి అందించబడింది. జ్యోతిష శాస్త్రం యొక్క ఈ పవిత్ర జ్ఞానం ప్రతి తరంలో సంరక్షించబడి మరియు మెరుగుపరచబడింది, వేద జ్యోతిషం యొక్క కాలాతీత జ్ఞానాన్ని ఆధునిక విశ్లేషణ విధానాలతో కలుపుతూ.',
+      description2: '15 సంవత్సరాలకు పైగా అంకితభావంతో ఆచరిస్తూ, జ్యోతిషుడు వెంకటేష్ వేలాది కుటుంబాలను మరియు వ్యక్తులను జీవితంలోని అతి ముఖ్యమైన నిర్ణయాలలో - వివాహ అనుకూలత మరియు వృత్తి ఎంపికల నుండి గ్రహ దోషాల పరిష్కారం మరియు వాస్తు సంప్రదింపుల వరకు - మార్గదర్శనం చేశారు.',
+      stat1Title: '15+',
+      stat1Label: 'సంవత్సరాల అనుభవం',
+      stat2Title: '10000+',
+      stat2Label: 'సంప్రదింపులు',
+      stat3Title: '5000+',
+      stat3Label: 'కుటుంబాలు',
+      highlight1: '15+ సంవత్సరాల అనుభవం',
+      highlight2: 'వేలాది కుటుంబాల విశ్వాసం',
+      highlight3: 'సాంప్రదాయ + శాస్త్రీయ విధానం',
+      highlight4: 'వంశపారంపర్య జ్యోతిష వంశం',
+    },
+    // Qualifications
+    qualifications: {
+      sectionTag: 'ధ్రువపత్రాలు',
+      title: 'అర్హతలు & ధ్రువపత్రాలు',
+      subtitle: 'జ్యోతిష శాస్త్రంలో ప్రముఖ సంస్థల గుర్తింపు',
+      items: [
+        {
+          title: 'జ్యోతిష మణి',
+          issuer: 'తిరు గురువారుళ్ జ్యోతిష వెల్ఫేర్ అసోసియేషన్',
+          icon: '🏆',
+        },
+        {
+          title: 'జ్యోతిష్ విశారద',
+          issuer: 'NS లైవ్ ఆస్ట్రో కంపెనీ',
+          icon: '🌟',
+        },
+        {
+          title: 'ప్రశంసా పత్రం',
+          issuer: 'KP స్టెల్లార్ రీసెర్చ్ ఇన్‌స్టిట్యూట్',
+          icon: '📜',
+        },
+        {
+          title: 'ప్రశంసా పత్రం',
+          issuer: 'ఇస్కాన్ (ISKCON)',
+          icon: '🙏',
+        },
+        {
+          title: 'జ్యోతిష & వాస్తు డిప్లొమా',
+          issuer: 'రాష్ట్రీయ సంస్కృత విద్యాపీఠం',
+          icon: '📚',
+        },
+        {
+          title: 'M.A. (ఫలిత జ్యోతిష)',
+          issuer: 'పోస్ట్ గ్రాడ్యుయేట్ డిగ్రీ',
+          icon: '🎓',
+        },
+        {
+          title: 'జ్యోతిష ఆచార్య',
+          issuer: 'నేషనల్ సంస్కృత యూనివర్సిటీ',
+          icon: '⭐',
+        },
+      ],
+    },
+    // Services
+    services: {
+      sectionTag: 'మా సేవలు',
+      title: 'జ్యోతిష సేవలు',
+      subtitle: 'మీ జీవితంలోని ప్రతి అంశాన్ని మార్గదర్శనం చేయడానికి సమగ్ర వేద జ్యోతిష సేవలు',
+      items: [
+        {
+          title: 'జాతక చదవడం',
+          description: 'వేద సూత్రాల ఆధారంగా గ్రహ ప్రభావాలు, బలాలు మరియు జీవిత మార్గ మార్గదర్శనాన్ని వెల్లడించే మీ జన్మ చార్ట్ యొక్క వివరమైన విశ్లేషణ.',
+          icon: '🔮',
+        },
+        {
+          title: 'వివాహ అనుకూలత',
+          description: 'భావి జంటలకు అనుకూలత మరియు సామరస్య ఐక్యతను నిర్ధారించే గుణ మిళన విశ్లేషణతో సాంప్రదాయ కుండలి అనుకూలత.',
+          icon: '💍',
+        },
+        {
+          title: 'వృత్తి మార్గదర్శనం',
+          description: 'ఆదర్శ వృత్తి మార్గాలు, వ్యాపార వెంచర్లకు అనుకూల కాలాలు మరియు వృత్తిపరమైన వృద్ధి సమయం గురించి జ్యోతిష అంతర్దృష్టులు.',
+          icon: '💼',
+        },
+        {
+          title: 'వాస్తు సంప్రదింపు',
+          description: 'ఇళ్ళు, కార్యాలయాలు మరియు వాణిజ్య ప్రదేశాలలో సానుకూల శక్తి ప్రవాహం మరియు సమృద్ధిని నిర్ధారించడానికి నిపుణుల వాస్తు శాస్త్ర మార్గదర్శనం.',
+          icon: '🏠',
+        },
+        {
+          title: 'దోష విశ్లేషణ',
+          description: 'మంగళ దోష, కాల సర్ప దోష, సాడే సాతి మరియు ఇతర గ్రహ బాధల గుర్తింపు మరియు పరిహారాలు.',
+          icon: '⚡',
+        },
+        {
+          title: 'వ్యక్తిగత సంప్రదింపు',
+          description: 'ఆరోగ్యం, సంబంధాలు, ఆర్ధికం మరియు ఆధ్యాత్మిక వృద్ధితో సహా నిర్దిష్ట జీవిత ఆందోళనల కోసం ఒంటరి సంప్రదింపు.',
+          icon: '🙏',
+        },
+      ],
+    },
+    // Testimonials
+    testimonials: {
+      sectionTag: 'అభిప్రాయాలు',
+      title: 'మా క్లయింట్లు ఏమంటున్నారు',
+      subtitle: 'భారతదేశం అంతటా వేలాది కుటుంబాల విశ్వాసం',
+      items: [
+        {
+          name: 'రమేష్ కుమార్',
+          location: 'హైదరాబాద్',
+          text: 'నా వృత్తి మార్పు గురించి వెంకటేష్ గారు చేసిన అంచనాలు పూర్తిగా ఖచ్చితమైనవి. ఆయన నన్ను కష్టమైన మార్పులో మార్గదర్శనం చేశారు మరియు ఇప్పుడు నేను నా కొత్త పాత్రలో అభివృద్ధి చెందుతున్నాను.',
+          rating: 5,
+        },
+        {
+          name: 'లక్ష్మి దేవి',
+          location: 'విజయవాడ',
+          text: 'మా అమ్మాయి వివాహ అనుకూలత కోసం వెంకటేష్ గారిని సంప్రదించాము. ఆయన సమగ్ర విశ్లేషణ మరియు ఖచ్చితమైన అంచనాలు మాకు పూర్తి విశ్వాసాన్ని ఇచ్చాయి.',
+          rating: 5,
+        },
+        {
+          name: 'సురేష్ రెడ్డి',
+          location: 'తిరుపతి',
+          text: 'మా కొత్త ఇంటి కోసం వాస్తు సంప్రదింపు చాలా వివరంగా ఉంది. ఆయన సూచనలను అమలు చేసిన తర్వాత, మా కుటుంబ శ్రేయస్సు మరియు సమృద్ధిలో సానుకూల మార్పులను గమనించాము.',
+          rating: 5,
+        },
+        {
+          name: 'ప్రియ శర్మ',
+          location: 'బెంగళూరు',
+          text: 'నేను సాడే సాతిలో ఉన్నాను మరియు చాలా ఆందోళన చెందాను. వెంకటేష్ గారు ప్రభావాలను స్పష్టంగా వివరించడమే కాకుండా సమర్థవంతమైన పరిహారాలను అందించారు.',
+          rating: 4,
+        },
+        {
+          name: 'ఆనంద్ రావు',
+          location: 'చెన్నై',
+          text: 'చాలా మంది జ్యోతిషులను సంప్రదించిన తర్వాత, వెంకటేష్ గారు ప్రత్యేకంగా నిలబడతారని చెప్పగలను. ఆయన వంశపారంపర్య జ్ఞానం మరియు శాస్త్రీయ విధానం ఆయన చదువులను అద్భుతంగా ఖచ్చితంగా చేస్తాయి.',
+          rating: 5,
+        },
+      ],
+    },
+    // Contact
+    contact: {
+      sectionTag: 'సంప్రదించండి',
+      title: 'మమ్మల్ని సంప్రదించండి',
+      subtitle: 'ఈ రోజే మీ సంప్రదింపును బుక్ చేయండి మరియు మీ జీవితం యొక్క గ్రహ రూపకల్పనను కనుగొనండి',
+      nameLabel: 'మీ పేరు',
+      namePlaceholder: 'మీ పూర్తి పేరు నమోదు చేయండి',
+      phoneLabel: 'ఫోన్ నంబర్',
+      phonePlaceholder: 'మీ ఫోన్ నంబర్ నమోదు చేయండి',
+      messageLabel: 'మీ సందేశం',
+      messagePlaceholder: 'మీ ప్రశ్న గురించి చెప్పండి...',
+      submitBtn: 'సందేశం పంపండి',
+      callText: 'ఇప్పుడు కాల్ చేయండి',
+      whatsappText: 'వాట్సాప్',
+      emailText: 'ఈమెయిల్',
+      locationText: 'ప్రదేశం',
+      phone: '+91 77990 99069',
+      email: 'astrologervenkateswarlu1@gmail.com',
+      address: 'హైదరాబాద్, తెలంగాణ, ఇండియా',
+    },
+    // Footer
+    footer: {
+      quote: '"ఆకాశంలో నక్షత్రాలు మనకు మార్గదర్శనం చేయడానికి ప్రకాశిస్తాయి, జ్యోతిష జ్ఞానం మార్గాన్ని ప్రకాశింపజేస్తుంది."',
+      copyright: '© 2026 జ్యోతిషుడు వెంకటేష్. అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి.',
+      quickLinks: 'త్వరిత లింకులు',
+      services: 'సేవలు',
+      followUs: 'మమ్ములను ఫాలో అవ్వండి',
+      designedBy: '✨ ఆధ్యాత్మిక సారంతో రూపొందించబడింది',
+    },
+  },
+};
+
+export function LanguageProvider({ children }) {
+  const [language, setLanguage] = useState('en');
+  
+  const t = translations[language];
+  
+  const toggleLanguage = () => {
+    setLanguage(prev => prev === 'en' ? 'te' : 'en');
+  };
+
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage, toggleLanguage, t }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+}
+
+export function useLanguage() {
+  const context = useContext(LanguageContext);
+  if (!context) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
+  }
+  return context;
+}
