@@ -45,10 +45,10 @@ export default function Navbar() {
             </div>
             <div className="hidden sm:block">
               <span className="font-heading text-lg font-semibold gradient-text">
-                Venkateswarlu
+                {t.nav.brandName}
               </span>
               <span className="block text-xs tracking-widest uppercase" style={{ color: `${theme.textPrimary}99` }}>
-                Astrologer
+                {t.nav.brandSubtitle}
               </span>
             </div>
           </a>

@@ -210,15 +210,16 @@ export default function Hero() {
     >
       {/* Sanatana Dharma Background */}
       <div className="absolute inset-0">
-        {/* Base gradient - warm saffron-dark tones */}
+        {/* Base gradient aligned with the site-wide cosmic flow */}
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(135deg, #0A0A1A 0%, #0D0820 25%, #120D1E 50%, #0D0A18 75%, #0A0A1A 100%)'
+          background: 'linear-gradient(180deg, #0F173B 0%, #0A1030 34%, #060A1A 72%, #040815 100%)'
         }} />
         
-        {/* Sacred warm radial glows */}
-        <div className="absolute top-0 left-0 w-[700px] h-[700px] bg-gradient-radial from-saffron-500/6 via-gold-500/3 to-transparent rounded-full -translate-x-1/4 -translate-y-1/4" />
-        <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-gradient-radial from-gold-500/5 via-saffron-500/3 to-transparent rounded-full translate-x-1/4 translate-y-1/4" />
-        <div className="absolute top-1/3 left-1/2 w-[600px] h-[600px] bg-gradient-radial from-sacred-red/3 via-transparent to-transparent rounded-full -translate-x-1/2 -translate-y-1/2" />
+        {/* Sacred cosmic glows */}
+        <div className="absolute top-0 left-0 w-[700px] h-[700px] bg-gradient-radial from-blue-500/10 via-blue-500/5 to-transparent rounded-full -translate-x-1/4 -translate-y-1/4" />
+        <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-gradient-radial from-pink-500/8 via-fuchsia-500/4 to-transparent rounded-full translate-x-1/4 translate-y-1/4" />
+        <div className="absolute top-1/3 left-1/2 w-[600px] h-[600px] bg-gradient-radial from-gold-500/6 via-transparent to-transparent rounded-full -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent via-[#091022]/80 to-[#10183d]" />
 
         {/* Sri Yantra sacred geometry in center */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] opacity-[0.025] animate-spin-slow" style={{ animationDuration: '120s' }}>

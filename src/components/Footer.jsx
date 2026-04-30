@@ -22,7 +22,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-spiritual-dark border-t border-gold-500/10">
+    <footer className="relative bg-spiritual-dark">
       {/* Spiritual quote banner */}
       <div className="bg-gradient-to-r from-gold-500/5 via-saffron-500/10 to-gold-500/5 py-8">
         <p className="text-center font-decorative text-lg sm:text-xl text-gold-400/80 italic max-w-3xl mx-auto px-4">
@@ -40,10 +40,10 @@ export default function Footer() {
               </div>
               <div>
                 <span className="font-heading text-lg font-semibold gradient-text block">
-                  Venkateswarlu
+                  {t.nav.brandName}
                 </span>
                 <span className="text-xs text-gold-400/60 tracking-widest uppercase">
-                  Astrologer
+                  {t.nav.brandSubtitle}
                 </span>
               </div>
             </div>
@@ -137,6 +137,14 @@ export default function Footer() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Disclaimer */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 mt-8">
+        <p className="text-sm text-gold-500/60 text-center max-w-4xl mx-auto leading-relaxed border border-gold-500/10 bg-gold-500/5 p-4 rounded-lg">
+          <strong className="text-gold-400">Disclaimer: </strong>
+          {t.footer.disclaimer || 'Astrology requires faith and is an interpretative art based on ancient scriptures. The readings provided are indicative and for spiritual guidance only. They should not substitute for professional medical, legal, or financial advice. Results interpretation may vary.'}
+        </p>
       </div>
 
       {/* Bottom bar */}

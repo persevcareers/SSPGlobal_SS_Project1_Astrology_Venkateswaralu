@@ -9,25 +9,27 @@ import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
-import ThemeSwitcher from './components/ThemeSwitcher';
+import ShareFloat from './components/ShareFloat';
+import Events from './components/Events';
 
 function App() {
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <div className="min-h-screen" style={{ backgroundColor: 'var(--theme-bg-dark)', transition: 'background-color 0.5s ease' }}>
+        <div className="cosmic-reference-shell min-h-screen" style={{ transition: 'background-color 0.5s ease' }}>
           <Navbar />
           <main>
             <Hero />
             <About />
             <Qualifications />
             <Services />
+            <Events />
             <Testimonials />
             <Contact />
           </main>
           <Footer />
           <WhatsAppFloat />
-          <ThemeSwitcher />
+          <ShareFloat />
         </div>
       </LanguageProvider>
     </ThemeProvider>

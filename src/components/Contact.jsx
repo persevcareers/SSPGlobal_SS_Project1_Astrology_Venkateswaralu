@@ -70,9 +70,8 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="relative py-24 bg-cosmic overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 section-divider" />
-
+    <section id="contact" className="relative py-24 overflow-hidden bg-cosmic">
+      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#040815] via-[#091022]/70 to-transparent pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div

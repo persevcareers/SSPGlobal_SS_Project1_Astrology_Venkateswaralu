@@ -49,9 +49,9 @@ export default {
         }
       },
       fontFamily: {
-        heading: ['Cinzel', 'serif'],
-        body: ['Inter', 'sans-serif'],
-        decorative: ['Playfair Display', 'serif'],
+        heading: ['Cinzel', '"Noto Serif Telugu"', 'serif'],
+        body: ['Inter', '"Noto Sans Telugu"', 'sans-serif'],
+        decorative: ['Playfair Display', '"Noto Serif Telugu"', 'serif'],
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',

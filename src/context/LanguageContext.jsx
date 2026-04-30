@@ -13,6 +13,8 @@ const translations = {
       testimonials: 'Testimonials',
       contact: 'Contact',
       bookNow: 'Book Now',
+      brandName: 'Acharya Venkateshwarlu',
+      brandSubtitle: 'Astrologer',
     },
     // Hero
     hero: {
@@ -28,7 +30,10 @@ const translations = {
     // About
     about: {
       sectionTag: 'Our Legacy',
-      title: 'About Astrologer Venkateswarlu',
+      title: 'About Acharya Venkateshwarlu',
+      profileName: 'Acharya Venkateshwarlu',
+      profileTitle: 'Hereditary Astrologer',
+      profileSubtitle: 'Jyotisha Acharya',
       description: 'Astrology has been practiced in our family for generations, passed down from our revered ancestors and forefathers. This sacred knowledge of Jyotisha Shastra has been preserved and refined through each generation, combining the timeless wisdom of Vedic astrology with modern analytical approaches.',
       description2: 'With over 15 years of dedicated practice, Astrologer Venkateswarlu has guided thousands of families and individuals through life\'s most important decisions — from marriage compatability and career choices to resolving planetary doshas and vastu consultations.',
       stat1Title: '15+',
@@ -181,6 +186,19 @@ const translations = {
       email: 'astrologervenkateswarlu1@gmail.com',
       address: 'Hyderabad, Telangana, India',
     },
+    // Share
+    share: {
+      button: 'Share Website',
+      copied: 'Link copied to clipboard!',
+      title: 'Astrologer Venkateswarlu',
+      text: 'Explore ancient Jyotisha wisdom.',
+    },
+    // Events
+    events: {
+      sectionTag: 'Gallery',
+      title: 'Spiritual Journey & Events',
+      subtitle: 'Glimpses of our spiritual ceremonies, astrology seminars, and divine gatherings.',
+    },
     // Footer
     footer: {
       quote: '"The stars in the sky shine to guide us, the wisdom of Jyotisha illuminates the path."',
@@ -201,10 +219,12 @@ const translations = {
       testimonials: 'అభిప్రాయాలు',
       contact: 'సంప్రదించండి',
       bookNow: 'బుక్ చేయండి',
+      brandName: 'ఆచార్య వెంకటేశ్వర్లు',
+      brandSubtitle: 'జ్యోతిష్కులు',
     },
     // Hero
     hero: {
-      title: 'విశ్వసనీయ వంశపారంపర్య జ్యోతిషుడు',
+      title: 'విశ్వసనీయ వంశపారంపర్య జ్యోతిష్కులు',
       titleHighlight: '15+ సంవత్సరాల అనుభవం',
       subtitle: 'తరతరాలుగా అందించబడిన ప్రాచీన జ్యోతిష శాస్త్ర జ్ఞానంతో జీవితాలను మార్గదర్శనం చేస్తున్నాము',
       cta1: 'సంప్రదింపు బుక్ చేయండి',
@@ -216,9 +236,12 @@ const translations = {
     // About
     about: {
       sectionTag: 'మా వారసత్వం',
-      title: 'జ్యోతిషుడు వెంకటేష్ గురించి',
+      title: 'ఆచార్య వెంకటేశ్వర్లు గురించి',
+      profileName: 'ఆచార్య వెంకటేశ్వర్లు',
+      profileTitle: 'వంశపారంపర్య జ్యోతిష్కులు',
+      profileSubtitle: 'జ్యోతిష ఆచార్య',
       description: 'జ్యోతిష శాస్త్రం మా కుటుంబంలో తరతరాలుగా ఆచరించబడుతోంది, మా పూజ్యులైన పూర్వీకులు మరియు తాతలు నుండి అందించబడింది. జ్యోతిష శాస్త్రం యొక్క ఈ పవిత్ర జ్ఞానం ప్రతి తరంలో సంరక్షించబడి మరియు మెరుగుపరచబడింది, వేద జ్యోతిషం యొక్క కాలాతీత జ్ఞానాన్ని ఆధునిక విశ్లేషణ విధానాలతో కలుపుతూ.',
-      description2: '15 సంవత్సరాలకు పైగా అంకితభావంతో ఆచరిస్తూ, జ్యోతిషుడు వెంకటేష్ వేలాది కుటుంబాలను మరియు వ్యక్తులను జీవితంలోని అతి ముఖ్యమైన నిర్ణయాలలో - వివాహ అనుకూలత మరియు వృత్తి ఎంపికల నుండి గ్రహ దోషాల పరిష్కారం మరియు వాస్తు సంప్రదింపుల వరకు - మార్గదర్శనం చేశారు.',
+      description2: '15 సంవత్సరాలకు పైగా అంకితభావంతో ఆచరిస్తూ, జ్యోతిష్కులు వెంకటేష్ వేలాది కుటుంబాలను మరియు వ్యక్తులను జీవితంలోని అతి ముఖ్యమైన నిర్ణయాలలో - వివాహ అనుకూలత మరియు వృత్తి ఎంపికల నుండి గ్రహ దోషాల పరిష్కారం మరియు వాస్తు సంప్రదింపుల వరకు - మార్గదర్శనం చేశారు.',
       stat1Title: '15+',
       stat1Label: 'సంవత్సరాల అనుభవం',
       stat2Title: '10000+',
@@ -369,10 +392,23 @@ const translations = {
       email: 'astrologervenkateswarlu1@gmail.com',
       address: 'హైదరాబాద్, తెలంగాణ, ఇండియా',
     },
+    // Share
+    share: {
+      button: 'వెబ్‌సైట్ షేర్ చేయండి',
+      copied: 'లింక్ కాపీ చేయబడింది!',
+      title: 'జ్యోతిష్కులు వెంకటేష్',
+      text: 'ప్రాచీన జ్యోతిష జ్ఞానాన్ని అన్వేషించండి.',
+    },
+    // Events
+    events: {
+      sectionTag: 'గ్యాలరీ',
+      title: 'ఆధ్యాత్మిక ప్రయాణం & సంఘటనలు',
+      subtitle: 'మా ఆధ్యాత్మిక వేడుకలు, జ్యోతిష సదస్సులు మరియు పవిత్ర సమావేశాల దృశ్యాలు.',
+    },
     // Footer
     footer: {
       quote: '"ఆకాశంలో నక్షత్రాలు మనకు మార్గదర్శనం చేయడానికి ప్రకాశిస్తాయి, జ్యోతిష జ్ఞానం మార్గాన్ని ప్రకాశింపజేస్తుంది."',
-      copyright: '© 2026 జ్యోతిషుడు వెంకటేష్. అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి.',
+      copyright: '© 2026 జ్యోతిష్కులు వెంకటేష్. అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి.',
       quickLinks: 'త్వరిత లింకులు',
       services: 'సేవలు',
       followUs: 'మమ్ములను ఫాలో అవ్వండి',
